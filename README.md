@@ -16,7 +16,7 @@ Der Aufbau der Beregnungsanlage ist simpel, vor dem Zulauf des Verteilers wird e
 ###### Beregnung_planen.js
 
 - ***const pfad*** = Der Pfad in dem die Objekte ( States ) angelegt werden.
-- ***const niedershalgsmenge*** = Bei Neiderschlag >= Wert, wird die Beregnung ausgesetzt / der Intervall zurückgesetzt.
+- ***const niederschlagsmenge*** = Bei Neiderschlag >= Wert, wird die Beregnung ausgesetzt / der Intervall zurückgesetzt.
 - ***const niederschlag*** = Pfad zur Wettervorhersage bzgl. Niederschalgsmenge am jeweiligem Tag.
 
 # Objekte und States
