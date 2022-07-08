@@ -3,6 +3,8 @@
 Script zur Steuerung des 6-Fach Verteilers von Gardena ( https://amzn.to/3apYiGw ).
 Das Script besteht aus 2 teilen, Beregnung_Planen.js ist für die automatische Bewässerung zuständig und Beregnung_Starten ist für die eigentliche Beregnung / das Starten und Stoppen der Beregnung zuständig.
 
+Der Aufbau der Beregnungsanlage ist simpel, vor dem Zulauf des Verteilers wird ein Magnetventil geschalten. Dieses wird dann wiederrum per SmartPlug o.ä. ein- und ausgeschalten. Ich nutze dafür einen Sonoff Basic. Beim Magentventil sollte darauf geachtet werden, das dieses normal geschlossen ist ( NC ), so das im Falle eines Stromausfalls etc. der Zulauf geschlossen ist ( https://amzn.to/3Rlc9hO ).
+
 # Konfiguration
 
 ###### Beregnung_starten.js
