@@ -17,19 +17,22 @@ function main(){
             
             var objekt = obj.split(/\.(?=[^\.]+$)/);
             var position = Number( objekt[0].slice(-1) );
-
+            var aktiv = getState( objekt[0] +'._Aktiv' ).val;
+            
+            
             //Bei Regen zurücksetzen
-            if( Number( getState( niederschlag ).val ) >= niederschlagsmenge ){
+            if( Number( getState( niederschlag ).val ) >= niederschlagsmenge && aktiv ){
 
                 if( debug ) log('Setze Bereich '+ position +' wegen Regen zurück.');
                 setState( obj, Number( getState( objekt[0] +'.Intervall' ).val ), true );
 
-            } else {
+            } else if( aktiv ) {
 
                 //Beregnung bei erreichen des Intervalles einplanen
                 if( Number( getState(obj ).val -1 ) === 0 ){
                     
                     if( debug ) log('Plane Beregnung für den Bereich '+ position +' ein.'); 
+                    setState( obj, Number( getState( obj ).val -1 ), true );
                     setState( objekt[0] +'._Warte', true, true);
                 
                 } else { //Nächste Beregnung runterzählen
