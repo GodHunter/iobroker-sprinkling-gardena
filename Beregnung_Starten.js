@@ -11,6 +11,12 @@ function main(){
     if( debug )  log('-== STARTE BEWÄSSERUNGS-ROUTINE ==-');
     if( !alive ) log(device +' ist nicht erreichbar', 'error');
 
+    //Objekte anlegen
+    if(!existsState( pfad +'Allgemein.Aktiv' )) {
+        createStates( pfad );
+        return true;
+    };
+
     const positionen = []; //Objekt hält wartende Positionen
     let total = 0; //Anzahl aller aktiven Positionen
 
