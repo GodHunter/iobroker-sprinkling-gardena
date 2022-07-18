@@ -88,7 +88,7 @@ function main(){
 
         } else log( 'Die Beregnung konnte nicht beendet werden.', 'error');
 
-    } else if( debug ) log('Keine geplante Beregnung.');
+    } else if( debug && alive ) log('Keine geplante Beregnung.');
 
     if(debug) log('-== BEENDE BEWÄSSERUNGS-ROUTINE ==-');
 
@@ -109,7 +109,6 @@ function createStates(pfad){
     createState(pfad +'Allgemein.Aktiv', false, {read: true, write: true, type: 'boolean', desc: 'Aktive Beregnung'});
     createState(pfad +'Allgemein.Restlaufzeit', 0, {read: true, write: true, type: 'number', unit: 'Minuten', desc: 'Warten auf laufende Bewässerung'});
     createState(pfad +'Verteiler.Allgemein.Position', 1, {read: true, write: true, type: 'number', desc: 'Aktuelle Position des Verteilers'});
-    createState(pfad +'Verteiler.Allgemein.Gesamt', 4, {read: true, write: true, type: 'number', desc: 'Anzahl der angeschlossenen Ventile'});
 
     for (let i = 1; i <= 6; i++) {
         createState(pfad +'Verteiler.'+ i +'._Aktiv', false, {read: true, write: true, type: 'boolean', desc: 'Bereich angeschlossen'});
