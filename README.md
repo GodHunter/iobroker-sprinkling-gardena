@@ -45,3 +45,10 @@ Der Aufbau der Beregnungsanlage ist simpel, vor dem Zulauf des Verteilers wird e
 - Unterschiedliche Laufzeiten für die einzelnen Kanäle.
 - Automatische Beregnung nach x Tagen.
 - Manuelles schalten der Beregnung.
+
+# Support
+
+Wenn euch meine Arbeit gefällt, würde ich mich über eine Spende auf Ko-Fi freuen. 
+Vielen Dank.
+
+https://ko-fi.com/tobstar27688
