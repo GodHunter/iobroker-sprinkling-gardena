@@ -114,7 +114,7 @@ function createStates(pfad){
         createState(pfad +'Verteiler.'+ i +'._Aktiv', false, {read: true, write: true, type: 'boolean', desc: 'Bereich angeschlossen'});
         createState(pfad +'Verteiler.'+ i +'.Dauer', 5, {read: true, write: true, type: 'number', unit: 'Minuten', desc: 'Dauer der Bewässerung'});
         createState(pfad +'Verteiler.'+ i +'._Warte', false, {read: true, write: true, type: 'boolean', desc: 'Wartet auf Bewässerung'});
-        createState(pfad +'Verteiler.'+ i +'.Bezeichnung', 'Position '+ i, {read: true, write: true, type: 'number', desc: 'Nummer des Ventils'});
+        createState(pfad +'Verteiler.'+ i +'.Bezeichnung', 'Position '+ i, {read: true, write: true, type: 'string', desc: 'Nummer des Ventils'});
         createState(pfad +'Verteiler.'+ i +'.Intervall', 4, {read: true, write: true, type: 'number', unit: 'Tage', desc: 'Gewünschter Beregnungsintervall in Tagen'});
         createState(pfad +'Verteiler.'+ i +'.NaechsteBeregnung', 4, {read: true, write: true, type: 'number', unit: 'Tage',  desc: 'Verbleibende Tage bis zur Beregnung'});
     };
